@@ -1,0 +1,23 @@
+h1 {
+    color: green; 
+}
+
+seletor {
+    propriedade: valor;
+}
+
+h2 {
+    color: green;   /*Seleção por tag=*/
+}
+
+#economy h2 {
+    color: gold;    /*Seleção de elementos por ID*/
+}
+
+.creation-date {
+    color: #ccc;    /*Seleçao com base na classe.*/
+}
+ 
+* {
+    color: red;       /* Colore todos os DEMAIS elementos que ainda não foram estilizados */
+}
