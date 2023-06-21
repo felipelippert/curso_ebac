@@ -9,3 +9,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Added a changelog.md
 - added to mac de felipe
+- Created branch for studying
+- Created CSS folder to start studying.
