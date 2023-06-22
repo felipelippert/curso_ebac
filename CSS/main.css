@@ -1,11 +1,12 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;       /* Colore todos os DEMAIS elementos que ainda não foram estilizados */
+}
+
 h1 {
     color: green; 
 }
-
-                                /*
-                                seletor {
-                                    propriedade: valor;
-                                } */
 
 h2 {
     color: green;   /*Seleção por tag=*/
@@ -17,8 +18,4 @@ h2 {
 
 .creation-date {
     color: #ccc;    /*Seleçao com base na classe.*/
-}
- 
-* {
-    color: red;       /* Colore todos os DEMAIS elementos que ainda não foram estilizados */
 }
