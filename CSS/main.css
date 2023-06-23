@@ -4,18 +4,26 @@
     padding: 0;       /* Colore todos os DEMAIS elementos que ainda não foram estilizados */
 }
 
-h1 {
-    color: green; 
+header li {
+    display: inline;
 }
 
-h2 {
-    color: green;   /*Seleção por tag=*/
+.container {
+    width: 1366px;
+    margin: 0 auto;
 }
 
-#economy h2 {
-    color: gold;    /*Seleção de elementos por ID*/
+section .articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.creation-date {
-    color: #ccc;    /*Seleçao com base na classe.*/
+.articles article img {
+    height: 180px;
 }
+
+.articles article {
+    width: 30%;
+}
+
