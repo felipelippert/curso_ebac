@@ -16,16 +16,16 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="#">Sobre a loja</a>
+                        <a href="#about">Sobre a loja</a>
                     </li>
                     <li>
-                        <a href="#">Contato</a>
+                        <a href="#contact">Contato</a>
                     </li>
                 </ul>
             </nav> 
         </div>
     </header>
-    <section>
+    <section id="about">
         <div class="container">
             <img class="store-front" src="./images/loja.jpg" alt="Fachada da loja Games Hop">
             <div>
@@ -44,17 +44,17 @@
             </div>
         </div>
     </section>
-    <section>
+    <section id="contact">
         <div class="container">
             <h2>Contato</h2>
-            <div>
+            <div class="contact-methods">
                 <div>
                     <h3>Fale conosco</h3>
                     <form>
-                        <input type="text" placeholder="Seu nome"/>
-                        <input type="email" placeholder="Seu e-mail"/>
+                        <input type="text" placeholder="Seu nome" required/>
+                        <input type="email" placeholder="Seu e-mail" required/>
                         <input type="tel" placeholder="Seu telefone (opcional)"/>
-                        <textarea placeholder="Sua mensagem"></textarea>
+                        <textarea placeholder="Sua mensagem" required></textarea>
                         <button type="submit">Enviar</button>
                     </form>
                 </div>
@@ -87,5 +87,12 @@
             </div>
         </div>
     </section>
+    <footer>
+        <div class="container">
+            <p>
+                &copy; Games Shop - Todos os direitos reservados - 2023
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
