@@ -16,6 +16,10 @@ form.addEventListener('submit', function(e) {
     formEValido = validaNome(nomeBeneficiario.value)
     if (formEValido) {
         alert(mensagemSucesso)
+
+        nomeBeneficiario.value = '';
+        numeroContaBeneficiario.value = '';
+        valorDeposito.value = '';
     }
     else {
         alert('O nome não está completo')
