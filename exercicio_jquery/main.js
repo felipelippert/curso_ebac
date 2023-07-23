@@ -1,7 +1,7 @@
 $(document).ready(function() {
     const tarefas = []
     const campo = $('form input')
-    const spanSucesso = '<span class="span-sucesso">Atividade adicionada com sucesso</span>'
+    const spanSucesso = '<span class="span-sucesso">Tarefa adicionada com sucesso</span>'
     const spanErro = '<span class="span-erro">Essa tarefa já foi adicionada.</span>'
 
         $('form').on('submit', function (e) {

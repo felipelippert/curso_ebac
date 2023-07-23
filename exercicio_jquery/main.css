@@ -45,6 +45,7 @@ ul {
 }
 
 li {
+    padding: 8px;
     font-size: 26px;
     font-weight: bold;
     list-style: disc;
