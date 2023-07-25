@@ -51,11 +51,14 @@ li {
     list-style: disc;
     margin-left: 285px;
     text-transform: capitalize; 
+    text-decoration: none;
 }
 
 #item:hover {
     cursor: pointer;
 }
+
+
 
 .span-sucesso {
     font-weight: bold;
@@ -69,4 +72,8 @@ li {
     color: rgb(247, 61, 61);
     padding: 8px;
     margin-left: 250px;
+}
+
+.crossOut {
+    text-decoration: line-through;
 }

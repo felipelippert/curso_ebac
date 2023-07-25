@@ -12,12 +12,13 @@ $(document).ready(function() {
             
         }
         else {
-            
             tarefas.push(campo.val())
             const novoItem = $(`<li id="item">${campo.val()}</li>`)
+            
+            
+
             $(novoItem).appendTo('ul')
             $(spanSucesso).appendTo('p')
-        
         }
         $('form input').val('')
         console.log(tarefas)
@@ -26,9 +27,10 @@ $(document).ready(function() {
             $('span').css('display', 'none')
         })
     })
-    $('ul').on('click', function() {
-        $('li').css('text-decoration', 'line-through')
-        
+
+
+    $('ul').on("click", "li", function() {
+        $(this).css('text-decoration', 'line-through')
     })
-    
+
 })
