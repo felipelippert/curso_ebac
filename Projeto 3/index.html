@@ -257,19 +257,19 @@
                         <form>
                             <div class="mb-3">
                                 <label for="nome" class="form-label fw-bold colored-text">Seu nome</label>
-                                <input type="text" class="form-control" id="nome" required>
+                                <input type="text" class="form-control" id="nome" name="nome" required>
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label fw-bold colored-text">Seu e-mail</label>
-                                <input type="email" class="form-control" id="email" required>
+                                <input type="email" class="form-control" id="email" name="email" required>
                             </div>
                             <div class="mb-3">
                                 <label for="telefone" class="form-label fw-bold colored-text">Seu telefone (opcional)</label>
-                                <input type="tel" class="form-control" id="telefone">
+                                <input type="tel" class="form-control" id="telefone" name="telefone">
                             </div>
                             <div class="mb-3">
                                 <label for="mensagem" class="form-label fw-bold colored-text">Sua mensagem</label>
-                                <textarea class="form-control" id="msg" required></textarea>
+                                <textarea class="form-control" id="msg"></textarea>
                             </div>
                             <button type="submit" class="btn fw-bold">Enviar</button>
                         </form>
@@ -316,6 +316,29 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/messages_pt_BR.min.js"></script>
 
+    <script>
+        $(document).ready(function() {
+            $('#telefone').mask('(00) 00000-0000')
+            
+            $('form').validate({
+                rules: {
+                    nome: {
+                        required: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    telefone: {
+                        required: false
+                    }
+                }
+            })
+        })
+    </script>
 </body>
 </html>
