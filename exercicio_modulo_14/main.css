@@ -1,3 +1,14 @@
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar {
+    background-color: #7c77b9;
+}
+
+.nav-link,
+.nav-link:hover,
+.navbar-brand,
+.navbar-brand:hover {
+    color: #fff;
 }
