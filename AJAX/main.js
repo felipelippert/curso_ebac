@@ -9,21 +9,36 @@ $(document).ready(function() {
         $(button).find('i').addClass('d-none')
         $(button).find('span').removeClass('d-none')
 
-        $.ajax(endpoint).done(function(response) {
-            const rua = response.logradouro;
-            const bairro = response.bairro;
-            const cidade = response.localidade;
-            const estado = response.uf;
-            const address = `${rua}, ${bairro} - ${cidade} - ${estado} `;
-            $('#address').val(address)
 
 
-            setTimeout(function() {
-                $(button).find('i').removeClass('d-none')
-                $(button).find('span').addClass('d-none')
-                
-            }, 3000);
-
+        fetch(endpoint)
+        .then(function(response) {
+            return response.json();
         })
+        .then(function(json) {
+            const rua = json.logradouro;
+            const bairro = json.bairro;
+            const cidade = json.localidade;
+            const estado = json.uf;
+            const address = `${rua}, ${bairro} - ${cidade} - ${estado} `;
+            $('#address').val(address);
+        })
+        .catch(function(error) {
+            alert('There was a problem finding this address. Try again later.')
+        })
+        .finally(function() {
+            setTimeout(function() {
+                $(button).find('i').removeClass('d-none');
+                $(button).find('span').addClass('d-none');
+            }, 1000);
+        })
+    })
+
+    $('#form-order').submit(function(event) {
+        event.preventDefault();
+        
+        if ($('#name').val().length == 0) {
+            throw new Error('Enter your name');
+        }
     })
 })
