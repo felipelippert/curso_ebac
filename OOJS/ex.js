@@ -30,9 +30,14 @@ function Member(name, age, membershipType) {
     }
 }
 
+function Staff(name, age, job) {
+    Member.call(this, name, age)
+    this.job = job
+}
+
 const member1 = new Member("Felipe", 27, "free");
 const member2 = new Member("Sabrina", 29, "free");
-const member3 = new Member("John", 19, "free");
+const staff1 = new Staff("John", 19, "System Manager");
 
 member1.changePlan();
 console.log(member1.name);
@@ -45,6 +50,6 @@ console.log(member2.age);
 console.log(member2.getMembership());
 
 
-console.log(member3.name);
-console.log(member3.age);
-console.log(member3.getMembership());
+console.log(staff1.name);
+console.log(staff1.age);
+console.log(staff1.job);
