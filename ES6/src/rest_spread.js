@@ -8,7 +8,7 @@ function addition() {
     }
 }
 
-// REST
+// REST OPERATOR
 function sumWithRest(...numbers) {
     const sum = numbers.reduce((result, index) => {
         result += index;
@@ -16,5 +16,7 @@ function sumWithRest(...numbers) {
     }, 0)
     return sum;
 }
-
 console.log(sumWithRest(10, 20, 30));
+
+// SPREAD OPERATOR
+const numbers = [1,2,3,4]
