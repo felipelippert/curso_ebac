@@ -39,3 +39,15 @@ console.log(cpfs)
 console.log(cpfs.keys())
 console.log(cpfs.values())
 
+cpfs.forEach((value) => {
+    console.log(value);
+})
+
+// SET DOES NOT ALLOW DUPLICATED ITEMS
+const array = ['Gian Souza', 'José Paulo', 'Maria Isabel', 'Luana', 'Luana', 'Gian Souza'];
+
+const arrayAsSet = new Set([...array]);
+console.log(arrayAsSet);
+
+const noDuplicatesArray = [...arrayAsSet];
+console.log(noDuplicatesArray);
