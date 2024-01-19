@@ -28,7 +28,6 @@ const promiseWithParameters = (username, password) => {
 
 async function mainThread() {
     console.log("start");
-
     promiseWithParameters('felipe@gmail.com', 123456).then(result => {
         console.log(result)
     })
