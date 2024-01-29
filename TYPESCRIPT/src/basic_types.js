@@ -1,0 +1,16 @@
+"use strict";
+let isRaining = false;
+let idade = 27;
+let altura = 1.71;
+const nacionality = 'brazilian';
+const alunos = ['felipe', 'john', 'sabrina'];
+const technologies = ['HTML', 'CSS', 'JS'];
+const grades = [7, 8, 9, 5];
+const list = ['gian', true, 27];
+let AnasAge = 25;
+AnasAge = "25 anos";
+let dataFromApi;
+dataFromApi = 10;
+dataFromApi = true;
+dataFromApi = [1, 2, 3];
+dataFromApi = 'string';
