@@ -2,10 +2,7 @@
 import { reactive } from 'vue';
 
 const name = "Felipe"
-const myObj = {
-  name: "felipe",
-  favoriteMovie: "Harry Potter"
-}
+
 
 function saysHi(name) {
   return `${name} says hi!`
@@ -27,7 +24,8 @@ const state = reactive({
   email: '',
   balance: 5000,
   transferring: 0,
-
+  names: ['felipe', 'sabrina', 'john', 'andrea'],
+  newName: '',
 
 })
 
@@ -53,7 +51,11 @@ function validatesTransferValue() {
   return balance >= transferring;
 }
 
-const names = ['felipe', 'sabrina', 'john', 'andrea'];
+function addsName() {
+  state.names.push(state.newName);
+}
+
+
 
 </script>
 
@@ -98,18 +100,15 @@ const names = ['felipe', 'sabrina', 'john', 'andrea'];
   <hr />
 
   <ul>
-    <li>
-      {{ names }}
+    <li v-for="name in state.names">
+      {{ name }}
     </li>
   </ul>
-
-  <ul>
-    <li v-for="name in names">
-    {{ name }}
-  </li>
-  </ul>
+  <input @keyup="event => state.newName = event.target.value" type="text" placeholder="Enter a new name">
+  <button @click="addsName" type="button">Send</button>
 
 
+  <h3 v-for="name in state.names">{{ name }}</h3>
 </template>
 
 <style scoped>
